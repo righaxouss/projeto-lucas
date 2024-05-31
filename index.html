@@ -102,60 +102,62 @@ background-color: rgb(248, 246, 240);
             main > p{
                 text-align: center;
                 padding: 10px;
-                font-size: 1.3em;
+                font-size: 1.1em;
              color: #282F3A;
 
             }
 
 
 
-form {
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif, Times, serif, 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            .file-upload {
+            position: relative;
+            display: inline-block;
+        }
+        .file-upload input[type="file"] {
+            position: absolute;
+            opacity: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            cursor: pointer;
+            width: 100%;
+            height: 100%;
+        }
+        .file-upload-button {
 
-  background: #EFEEF3;
-  padding: 50px;
-  border: 3px dashed #BEC0DA;
-}
-form > p{
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            border-radius: 4px;
+            font-size: 1.1em;
+        }
 
+
+            #param{
+
+                padding: 10px 30px ;
+            }
+
+
+
+#submit{
     font-size: 1.1em;
- 
-}
-
-form li,
-div > p {
- 
- color: #282F3A;
-  margin-bottom: 10px;
-  list-style-type: none;
- 
-}
-
-
-
-
-form label,
-form button {
-    box-shadow: #727df549 5px 10px 10px;
+padding: 15px;
+border-radius: 5px;
     border: none;
-    font-size: 1.1em;
+background-color: #007bff;
 color: white;
-  background-color:  #727CF5;
-  padding: 20px;
-  border-radius: 3px;
-  
-  height: auto;
+}
+
+#buscar{
+
+    font-size: 1.1em;
+
 }
 
 
-
-
-
-.submit{
-
-    border: none;
-
-}
 
 .aside{
 
@@ -223,27 +225,24 @@ text-align: left;
 
                     <br><br>
             
-                    <form method="post" enctype="multipart/form-data">
-                        <div>
-                          <label for="image_uploads">Selecione o Arquivo</label>
-                          <input type="file"
-                            id="image_uploads"
-                            name="image_uploads"
-                            accept=".jpg, .jpeg, .png"
-                            multiple />
-                        </div>
-
-                        <br>
-                        <br>
-                    
-                        <div>
-                          <button id="submit">Submit</button>
+                    <form action="/home/function1" method="post" enctype="multipart/form-data">
+                        <div class="file-upload">
+                            <button class="file-upload-button" type="button" onclick="document.getElementById('file').click()">Selecione o arquivo</button>
+                            <input type="file" id="file" name="file" required>
+                            
                         </div>
                         <br>
-
-                        <p>Tamanho máximo do arquivo 1GB. <a href="">Inscrever-se</a> para mais</p>
-                      </form>
-
+                        <br>
+                        <div>
+                            <label id="buscar" for="param">Oque buscar:</label>
+                            <input type="text" id="param" name="param" required>
+                        </div>
+                        
+                        <br>
+                        <div>
+                            <button id="submit" type="submit">Upload</button>
+                        </div>
+                    </form>
                       
 
 
