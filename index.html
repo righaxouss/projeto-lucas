@@ -22,23 +22,26 @@
     }
     
             body{
+                color: #E6EDF3;
             text-align: center;
     font-family: Arial, Helvetica, sans-serif;
-    background-color: white;
+    background-color: #0D1117;
     text-align: center;
     
             }
     
-
+header{
+    display: flex;
+}
 
 #burguer{  
 
 font-size: 35px;
-background-color: white;
-color: #282F3A;
+background-color: #8957E4;
+color: #E6EDF3;
 display: block;
 text-align: left;
-padding: 15px;
+padding: 10px;
 cursor: pointer;
 }
 
@@ -79,13 +82,22 @@ background-color: rgb(248, 246, 240);
 }
 
 
+header > p{
+   
+    font-size: 1.1em;
+    width: 100vw;
+    background-color: #8957E4;
+color: white;
+text-align: center;
+padding: 20px;
+}
 
             main{
-             
-             
+             padding: 20px;
+             margin: 40px 40px 0px 40px;
                 border-radius: 5px;
-                padding: 80px;
-                background-color: white;
+               
+                background-color: #0D1117;
 
                 
 
@@ -94,8 +106,8 @@ background-color: rgb(248, 246, 240);
 
             main > h1{
                 font-weight: bold;
-                color: #282F3A;
-                font-size: 3em;
+                color: #E6EDF3;
+                font-size: 3.5em;
                 padding: 10px;
             }
 
@@ -103,7 +115,7 @@ background-color: rgb(248, 246, 240);
                 text-align: center;
                 padding: 10px;
                 font-size: 1.1em;
-             color: #282F3A;
+             color: #8D96A0;
 
             }
 
@@ -125,8 +137,8 @@ background-color: rgb(248, 246, 240);
         }
         .file-upload-button {
 
-            background-color: #007bff;
-            color: white;
+            background-color: #8957E4;
+            color: #E6EDF3;
             padding: 10px 20px;
             border: none;
             cursor: pointer;
@@ -136,46 +148,84 @@ background-color: rgb(248, 246, 240);
 
 
             #param{
-
+                border: 0.5px solid white;
+                
+ border-radius: 0px 5px 5px 0px; ;
                 padding: 10px 30px ;
             }
 
 
 
 #submit{
+
     font-size: 1.1em;
 padding: 15px;
 border-radius: 5px;
     border: none;
-background-color: #007bff;
-color: white;
+background-color: #8957E4;
+color: #E6EDF3;
+}
+
+#buscarmain{
+display: flex;
+    padding-top: 30px;
 }
 
 #buscar{
-
+    
+    margin-left: 220px;
+    border-radius: 5px 0px 0px 5px;
+    padding: 9px;
+    background-color: #8957E4;
+color: #E6EDF3;
     font-size: 1.1em;
 
 }
 
 
 
-.aside{
-
-
+.principal{
+    
+    border-radius: 5px;
+padding: 40px;
+    border: 2px dashed #7B72FF;
 
 }
+
+
+
+aside{
+    margin-top: 100px;
+padding: 20px;
+background-color: #181923;
+
+}
+
 
 
 .aside > p{
-
-text-align: left;
+    
+padding: 10px;
+font-size: 1.1em;
+color: #8D96A0;
 
 }
 
-.aside > h3{
 
-    text-align: left;
+footer{
+
+    margin-top: 10px;
+padding: 20px;
+background-color: #181923;
 }
+
+.footer > p{
+    padding: 10px;
+font-size: 1.1em;
+color: #8D96A0;
+    
+}
+
 
 
     </style>
@@ -184,31 +234,12 @@ text-align: left;
 </head>
 <body>
     <center>
-        <header>
-            <i id="burguer" class="material-symbols-outlined"  onclick="clickMenu()">menu</i>
-            <menu id="itens" >
-                <ul>
-                    <li>
-                        <a href="">Opção 1</a>
-                    </li>
-                    <li>
-                        <a href="">Opção 2</a>
-                    </li>
-                    <li>
-                        <a href="">Opção 3</a>
-                    </li>
-        
-                    <li>
-                        <a href="">Opção 4</a>
-                    </li>
-        
-                    <li>
-                        <a href="">Opção 5</a>
-                    </li>
-                </ul>
-            </menu>
-        
-        </header>
+       
+            
+            <header>
+               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi voluptas velit ullam eos quo.</p>
+                
+            </header>
         
     </center>
 
@@ -224,45 +255,68 @@ text-align: left;
 
 
                     <br><br>
-            
-                    <form action="/home/function1" method="post" enctype="multipart/form-data">
-                        <div class="file-upload">
-                            <button class="file-upload-button" type="button" onclick="document.getElementById('file').click()">Selecione o arquivo</button>
-                            <input type="file" id="file" name="file" required>
+            <div class="principal" >
+                
+                        <form action="/home/function1" method="post" enctype="multipart/form-data">
+                            <div class="file-upload">
+                                <button class="file-upload-button" type="button" onclick="document.getElementById('file').click()">Selecione o arquivo</button>
+                                <input type="file" id="file" name="file" required>
+                
+                            </div>
                             
-                        </div>
-                        <br>
-                        <br>
-                        <div>
-                            <label id="buscar" for="param">Oque buscar:</label>
-                            <input type="text" id="param" name="param" required>
-                        </div>
-                        
-                        <br>
-                        <div>
-                            <button id="submit" type="submit">Upload</button>
-                        </div>
-                    </form>
-                      
+                            
+                                <div id="buscarmain" >
+                                    <label id="buscar" for="param">Oque buscar:</label>
+                                    <input type="text" placeholder="INFORME O PARAMETRO" id="param" name="param" required>
+                                </div>
+                            
+                
+                            
+                            
+            </div>
 
 
                             
                 </main>
             </center>
 
-
+            <div>
+                <button id="submit" type="submit">Upload</button>
+            </div>
+        </form>
             
+
+
+
+
          <aside>
 
-<div class="aside">
-    <p><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M240-80q-33 0-56.5-23.5T160-160v-640q0-33 23.5-56.5T240-880h320l240 240v480q0 33-23.5 56.5T720-80H240Zm280-520v-200H240v640h480v-440H520ZM240-800v200-200 640-640Z"/></svg></p>
-    
-   
-    
-</div>
-
-
+                <div class="aside">
+                    <p class="pprincipal">Como usar</p>
+                    <br>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Culpa autem voluptates dolorum temporibus commodi, est maiores dolor. Quis officia animi nostrum similique repudiandae quisquam aliquam, autem porro deserunt sint aliquid!</p>
+                </div>
+            
          </aside>
+
+
+         <footer>
+
+            <div class="footer" >
+                
+               <p>Descrição</p>
+
+
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Culpa autem voluptates dolorum temporibus commodi, est maiores dolor. Quis officia animi nostrum similique repudiandae quisquam aliquam, autem porro deserunt sint aliquid!</p>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Culpa autem voluptates dolorum temporibus commodi, est maiores dolor. Quis officia animi nostrum similique repudiandae quisquam aliquam, autem porro deserunt sint aliquid!</p>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Culpa autem voluptates dolorum temporibus commodi, est maiores dolor. Quis officia animi nostrum similique repudiandae quisquam aliquam, autem porro deserunt sint aliquid!</p>
+
+            </div>
+
+
+         </footer>
+
+
 
 
             <script>
